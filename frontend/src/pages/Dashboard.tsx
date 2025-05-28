@@ -21,7 +21,7 @@ const Dashboard: React.FC = () => {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('http://localhost:5000/api/agents/getAgents');
+      const res = await fetch('https://listpilot.onrender.com/api/agents/getAgents');
       if (!res.ok) throw new Error('Failed to fetch agents');
       const data = await res.json();
       setAgents(data);
@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/agents/${id}`, {
+      const res = await fetch(`https://listpilot.onrender.com/api/agents/${id}`, {
         method: 'DELETE',
       });
 
