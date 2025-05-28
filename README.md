@@ -10,7 +10,7 @@ A full-stack web application for managing agents with functionalities to add, vi
 - View list of all agents
 - Delete agents with confirmation
 - Refresh agents list dynamically
-- Upload files (e.g. CSV, PDFs)
+- Upload files (e.g. CSV, xlsx)
 - Distribute tasks (future integration)
 
 ---
@@ -45,7 +45,7 @@ A full-stack web application for managing agents with functionalities to add, vi
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/agent-management-dashboard.git
+git clone https://github.com/Aadarsh-2912/ListPilot.git
 cd agent-management-dashboard
 ```
 
@@ -54,14 +54,12 @@ cd agent-management-dashboard
 #### Backend
 
 ```bash
-cd server
 npm install
 ```
 
 #### Frontend
 
 ```bash
-cd ../client
 npm install
 ```
 
@@ -71,7 +69,7 @@ Create a `.env` file inside the `server/` directory:
 
 ```env
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/agents_db
+MONGO_URI=your-mongo-uri
 ```
 
 ### 4. Run the App
@@ -79,18 +77,16 @@ MONGO_URI=mongodb://localhost:27017/agents_db
 #### Backend
 
 ```bash
-cd server
-npm start
+node server.js
 ```
 
 #### Frontend
 
 ```bash
-cd ../client
-npm run dev
+npm start
 ```
 
-Visit: `http://localhost:5173`
+Visit: `http://localhost:3000`
 
 ---
 
@@ -101,30 +97,10 @@ Visit: `http://localhost:5173`
 | GET    | `/api/agents/getAgents`          | Fetch all agents     |
 | POST   | `/api/agents/addAgent`           | Add a new agent      |
 | DELETE | `/api/agents/:id`                | Delete an agent      |
+| POST   | `/api/auth/login`                | Login                |
+| POST   | `/api/files/upload`              | Upload File          |
+| GET    | `/api/files/tasks`               | Get task distribution|
 
----
-
-## 👤 Sample Agents
-
-```json
-[
-  { "name": "Alice Johnson", "email": "alice@example.com", "mobile": "9876543210", "password": "pass1234" },
-  { "name": "Bob Smith", "email": "bob@example.com", "mobile": "9876543211", "password": "pass1234" },
-  { "name": "Charlie Davis", "email": "charlie@example.com", "mobile": "9876543212", "password": "pass1234" },
-  { "name": "Diana Prince", "email": "diana@example.com", "mobile": "9876543213", "password": "pass1234" },
-  { "name": "Evan Stone", "email": "evan@example.com", "mobile": "9876543214", "password": "pass1234" }
-]
-```
-
-Use these agents to populate the database during testing.
-
----
-
-## 📌 Notes
-
-- Passwords are stored as plain text in this demo. **Use bcrypt for production.**
-- Add proper form validation and authentication for production.
-- File upload and task distribution components can be expanded based on your requirements.
 
 ---
 
@@ -132,8 +108,8 @@ Use these agents to populate the database during testing.
 
 For any queries or suggestions:
 
-- **Email:** yourname@example.com
-- **GitHub:** [your-username](https://github.com/your-username)
+- **Email:** aadarshanand2912@gmail.com
+- **GitHub:** [Aadarsh-2912](https://github.com/Aadarsh-2912)
 
 ---
 
