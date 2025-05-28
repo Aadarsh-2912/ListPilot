@@ -14,7 +14,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://listpilot.onrender.com',
+  origin: 'http://localhost:3000',
   credentials: true
 }));
 app.use(express.json());
