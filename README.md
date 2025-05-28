@@ -1,4 +1,4 @@
-# 🧑‍💼 Agent Management Dashboard
+# 🧑‍💼 ListPilot [Agent Management Dashboard]
 
 A full-stack web application for managing agents with functionalities to add, view, delete agents, upload files, and distribute tasks. Built using React (TypeScript) for the frontend and Node.js + Express for the backend with MongoDB as the database.
 
