@@ -32,7 +32,7 @@ const TaskDistribution: React.FC = () => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/files/tasks');
+      const response = await fetch('https://listpilot.onrender.com/api/files/tasks');
       if (!response.ok) {
         throw new Error('Failed to fetch task distribution data');
       }
